@@ -1,13 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --primary-pastel: #98D8C8;
+    --primary-light: #B5EAD7;
+    --primary-dark: #6BBF9D;
+    --text-dark: #2C3E50;
+    --bg-light: #F8FFFE;
+    --border-color: #D0E8E4;
+}
 
 body, * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    color: var(--text-dark);
+}
+
+body {
+    background-color: var(--bg-light);
+    line-height: 1.6;
 }
 
 h1 {
-    margin: 1rem;
+    margin: 1.5rem;
+    color: var(--primary-dark);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+table {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(98, 191, 157, 0.15);
+}
+
+thead {
+    background-color: var(--primary-pastel);
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+thead th {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 3px solid var(--primary-dark);
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: var(--primary-light);
+}
+
+tbody td {
+    padding: 0.75rem 1rem;
 }
 
 .cards {
@@ -21,9 +74,16 @@ h1 {
     flex-basis: 31%;
     margin: 1rem 0.4rem;
     padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
+    border: 2px solid var(--border-color);
     border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+    box-shadow: 0 4px 8px rgba(98, 191, 157, 0.1);
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--primary-pastel);
+    box-shadow: 0 6px 12px rgba(98, 191, 157, 0.2);
 }
 
 .card__email {
@@ -35,24 +95,82 @@ h1 {
     max-width: 768px;
     margin: 2rem auto;
     padding: 2rem;
-    border: solid 1px lightgrey;
+    border: 2px solid var(--border-color);
     border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+    box-shadow: 0 4px 8px rgba(98, 191, 157, 0.15);
+    background-color: white;
 }
 
-label, input {
-    margin-top: 5px;
+label {
     display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary-dark);
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
     font-size: inherit;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
 }
 
-input[type="text"] {
-    padding: .25rem;
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-pastel);
+    box-shadow: 0 0 0 3px rgba(152, 216, 200, 0.1);
 }
 
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button,
 input[type="submit"] {
-    background-color: lightgrey;
+    background-color: var(--primary-pastel);
     border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: var(--primary-dark);
+    color: white;
+    box-shadow: 0 4px 8px rgba(98, 191, 157, 0.3);
+}
+
+button:active,
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    display: inline-block;
+    margin: 1rem;
+}
+
+a:hover {
+    color: var(--primary-pastel);
+    text-decoration: underline;
 }
