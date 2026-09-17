@@ -16,8 +16,8 @@ html
       tbody
         each pet in data
           tr
-            td= pet.properties.pet_name || 'N/A'
-            td= pet.properties.species || 'N/A'
-            td= pet.properties.bio || 'N/A'
+            td= pet.properties.pet_name || '-'
+            td= pet.properties.species || '-'
+            td= pet.properties.bio || '-'
     br
     a(href='/update-cobj') Add a New Pet to This Table
