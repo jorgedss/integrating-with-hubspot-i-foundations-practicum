@@ -5,7 +5,7 @@ This repository is for the Integrating With HubSpot I: Foundations course. This 
 To read the full directions, please go to the [practicum instructions](https://app.hubspot.com/academy/l/tracks/1092124/1093824/5493?language=en).
 
 **HubSpot Developer Test Account - Pets Custom Object:**
-https://app.hubspot.com/contacts/50305868/objects/p2-69433792/views/all/list
+https://app.hubspot.com/contacts/50305868/objects/2-69433792/views/all/list
 
 *Note: Replace `p3012345` with your actual Pets object ID from HubSpot.*
 
