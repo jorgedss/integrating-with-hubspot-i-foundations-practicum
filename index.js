@@ -14,7 +14,7 @@ const HUBSPOT_OBJECT_ID = process.env.HUBSPOT_OBJECT_ID;
 const PORT = process.env.PORT || 3000;
 
 app.get('/', async (req, res) => {
-    const petsUrl = `https://api.hubapi.com/crm/v3/objects/${HUBSPOT_OBJECT_ID}?limit=100&properties=name,species,bio`;
+    const petsUrl = `https://api.hubapi.com/crm/v3/objects/${HUBSPOT_OBJECT_ID}?limit=100&properties=pet_name,species,bio`;
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ app.get('/update-cobj', async (req, res) => {
 app.post('/update-cobj', async (req, res) => {
     const newPet = {
         properties: {
-            name: req.body.name,
+            pet_name: req.body.pet_name,
             species: req.body.species,
             bio: req.body.bio
         }
