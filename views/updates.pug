@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet' href='/css/style.css')
+  body
+    .form-wrapper
+      h1 Add a New Pet
+      form(method='POST' action='/update-cobj')
+        div
+          label(for='name') Pet Name:
+          input(type='text' id='name' name='name' required)
+        div
+          label(for='species') Species:
+          input(type='text' id='species' name='species' required)
+        div
+          label(for='bio') Bio:
+          textarea(id='bio' name='bio' required style='padding: .25rem;')
+        button(type='submit') Submit
+      br
+      a(href='/') Back to Pet List
